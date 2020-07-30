@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.header{
+  @include relative($left: 0px, $top: 0px);
+  width: 100%;
+  z-index: 30;
+  &-bot{
+    background-color: $header-bg ;
+    .d-flex{
+      @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
+        $align-items: center, $gutter: null);
+      min-height: 60px;
+    }
+  }
+  &__logo{
+    width: percentage(190/$max-width);
+    &-img{
+
+    }
+  }
+}

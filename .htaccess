@@ -1,0 +1,77 @@
+# Helicon Ape version 3.1.0.115
+RewriteEngine on
+RewriteRule ^admin/$ admin/ [L]
+Options -Indexes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+DirectoryIndex  index.php
+RewriteRule ^([a-zA-Z0-9_-]+).html&page=([0-9]+)$ index.php?com=$1&page=$2  [L]
+RewriteRule ^([a-zA-Z0-9_-]+).html$ index.php?com=$1  [L]
+RewriteRule ^([a-zA-Z0-9_-]+).html/keyword=(.*)$ index.php?com=$1&keyword=$2  [L]
+RewriteRule ^([a-zA-Z0-9_-]+).html/keyword=(.*)&page=([0-9]+)$ index.php?com=$1&keyword=$2&page=$3  [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).htm$ index.php?com=$1&id=$2  [L]
+
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).html$ index.php?com=$1&idl=$2 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).htm$ index.php?com=$1&idc=$3 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).html$ index.php?com=$1&idi=$4 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).html&page=([0-9]+)$ index.php?com=$1&idl=$2&page=$3 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).htm&page=([0-9]+)$ index.php?com=$1&idc=$3&page=$4 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).html&page=([0-9]+)$ index.php?com=$1&idi=$4&page=$5 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([0-9]+)x([0-9]+)x([0-9]+)/(.*)\.(jpg|jpeg|png|gif|JPG|PNG)$ timthumb.php?src=$1/$2/$6.$7&w=$3&h=$4&zc=$5&q=80&thper=100&thper=100 [L]
+#RewriteRule ^thumbpro/([0-9]+)x([0-9]+)/([0-9]+)/(.*)$ timthumb_dongdau.php?w=$1&h=$2&zc=$3&q=95&src=http://%{HTTP_HOST}/$4  [L]
+ErrorDocument 404 /404.php
+
+<Ifmodule mod_php4.c>
+	php_flag display_errors  off
+	php_flag log_errors  off
+</Ifmodule>
+
+<Ifmodule mod_php5.c>
+	php_value short_open_tag 1
+	php_flag display_errors  off
+	php_flag log_errors  off
+	php_flag enable_dl  on
+</Ifmodule>
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 1 month"
+</IfModule>
+## EXPIRES CACHING ##
+
+
+<ifModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/* text/html text/xml text/css text/plain text/x-component text/x-js text/richtext text/xsd text/xsl
+    AddOutputFilterByType DEFLATE image/svg+xml application/xhtml+xml application/xml image/x-icon
+    AddOutputFilterByType DEFLATE application/rdf+xml application/rss+xml application/atom+xml
+    AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript application/json
+    AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-otf
+    AddOutputFilterByType DEFLATE font/truetype font/opentype
+    Header append Vary User-Agent env=!dont-vary
+    AddOutputFilter DEFLATE js css htm html xml text
+</ifModule>
+# 1 year
+<FilesMatch ".(ico|pdf|flv)$">
+Header set Cache-Control "max-age=29030400, public"
+</FilesMatch>
+# 1 WEEK
+<FilesMatch ".(jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+# 2 DAYS
+<FilesMatch ".(xml|txt|css|js)$">
+Header set Cache-Control "max-age=604800, proxy-revalidate"
+</FilesMatch>

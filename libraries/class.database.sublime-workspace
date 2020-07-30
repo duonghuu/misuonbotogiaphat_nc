@@ -1,0 +1,297 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"tra",
+				"transition"
+			],
+			[
+				"ten",
+				"tenkhongdau"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"borde",
+				"border-bottom"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"row",
+				"row_setting"
+			],
+			[
+				"tin",
+				"tin_nb"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"margin",
+				"margin-top"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 357.0,
+		"last_filter": "ins",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				" Install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/index.php",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/config.php",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/top.php",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/left_tpl.php",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/bottom.php",
+		"/D/xampp/htdocs/thienan/css/style.css",
+		"/D/xampp/htdocs/thienan/templates/congtrinh_tpl.php",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/news_detail_tpl.php",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/news_tpl.php",
+		"/D/xampp/htdocs/thienan/admin/templates/left_tpl.php",
+		"/D/xampp/htdocs/thienan/templates/layout/menu_top.php",
+		"/D/xampp/htdocs/thienan/libraries/config.php",
+		"/D/xampp/htdocs/thienan/libraries/file_requick.php",
+		"/D/xampp/htdocs/thienan/templates/congtrinh_detail_tpl.php",
+		"/D/xampp/htdocs/thienan/sources/congtrinh.php",
+		"/D/xampp/htdocs/thienan/templates/news_tpl.php",
+		"/D/xampp/htdocs/thienan/index.php",
+		"/D/xampp/htdocs/thienan/templates/index_tpl.php",
+		"/D/xampp/htdocs/thienan/sources/lang_en.php",
+		"/D/xampp/htdocs/thienan/sources/news.php",
+		"/D/xampp/htdocs/thienan/libraries/type.php",
+		"/D/xampp/htdocs/thienan/sources/template.php",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/style.css",
+		"/D/xampp/htdocs/thienan/templates/duan_tpl.php",
+		"/D/xampp/htdocs/thienan/sources/index.php",
+		"/D/xampp/htdocs/thienan/css/tab.css",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/.htaccess",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/sitemap.php",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/index_tpl.php",
+		"/D/xampp/htdocs/thienan/sources/giohang.php",
+		"/D/xampp/htdocs/thienan/css/reset.css",
+		"/D/xampp/htdocs/thienan/templates/layout/header.php",
+		"/D/xampp/htdocs/thienan/templates/layout/bottom.php",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/slider.php",
+		"/D/xampp/htdocs/hungthinh/initslider-1.js",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/html5boxplayer_playvideo.png",
+		"/D/xampp/htdocs/thienan/admin/templates/baiviet/man/items_tpl.php",
+		"/D/xampp/htdocs/thienan/admin/templates/baiviet/man/item_add_tpl.php",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/slick-theme2.css",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/media.css",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/menu_top.php",
+		"/D/xampp/htdocs/thienan/templates/layout/footer.php",
+		"/D/xampp/htdocs/thienan/video.php",
+		"/D/xampp/htdocs/thienan/templates/layout/top.php",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/dangtin_tpl.php",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/dangtin_detail_tpl.php",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/web.config",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/.htaccess 2",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/config 2.php",
+		"/D/xampp/htdocs/thienan/upload/hinhanh/duyenphanduonghongloan3129050-8730.mp3",
+		"/C/Users/NGOC TAN/AppData/Local/Temp/fz3temp-1/item_add_tpl.php",
+		"/F/xampp/htdocs/ansuong/index.php"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"300",
+			"480",
+			"ten",
+			"cong-trinh",
+			"dich-vu",
+			"--index",
+			"<?=$com?>",
+			"auto",
+			"tintuc",
+			"\ntintuc",
+			"news\n",
+			"();\n",
+			"web",
+			"web.",
+			"about",
+			"mxh",
+			"slider",
+			"banne",
+			"logo",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"250",
+			"350",
+			"<?=$com?>",
+			"du-an"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "class.database.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"289",
+				"upload\\hinhanh\\duyenphanduonghongloan3129050-8730.mp3"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 201.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,1 @@
+<p class="copy">Copyright © 2019 <font><?=$row_setting['ten_'.$lang]?></font>. All rights reserved. <font>Design by Nina.</font></p>

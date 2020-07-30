@@ -1,0 +1,412 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.main-title{
+  @include bg("idx-tit.png",$background-repeat: no-repeat,$background-size: null,$background-position: center bottom);
+  @include setFont(30px, #000, 700, $font-text);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  a,span{
+    color: #004a9e;
+    display: inline-block;
+  }
+  &--white{
+    a,span{
+      color: #fff;
+    }
+  }
+  &--black{
+    a,span{
+      color: #000;
+    }
+  }
+  @include media("<=mobile"){
+  }
+}
+.quangcao-main{}
+.quangcao-item{
+ &__url{
+   display: block;
+   position: relative;
+ }
+ &__figure{
+   @extend %bg-full;
+   margin-bottom: 0;
+   position: relative;
+   padding-top: percentage(550/1366);
+ }
+ &__info{
+  @include grid(flex, 
+    $align-items: center);
+  @include absolute(0,0,0,0);
+   &--inner{
+    max-width: 470px;
+   }
+ }
+ &__name{
+  @include setFont(20px, #fff, 700, $font-text);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+ }
+ &__desc{
+  @include setFont(15px, #fff, 400, $font-text);
+  @include line-clamp($font-size: 15px, $line-height: 1.5, $lines-to-show: 4, $max-height: false);
+ }
+}
+.tieuchi{
+  background-color: #fff;
+  padding: 20px 0;
+  &-main{
+    margin: 0 -1em;
+  }
+  &-item{
+    padding: 0 1em;
+    &__url{
+      @include grid(flex, $flex-wrap: wrap, $justify-content: null, 
+        $align-items: center, $gutter: null);
+    }
+    &__image{
+      width: percentage(90/276);
+    }
+    &__figure{
+      padding-top: 100%;
+      background-size: contain;
+      background-position: center center;
+      margin-bottom: 0;
+    }
+    &__info{
+      margin-left: 10px;
+      &-text{
+        @include setFont(14px, #393939, 400, $font-text);
+        margin-bottom: 0;
+        line-height: 1;
+      }
+      &-text--big{
+        @include setFont(40px, #393939, 400, $font-text);
+        position: relative;
+        display: inline-block;
+        padding: 7px 0;
+        @include p-el(before, $el-width: 20px, $el-height: 3px){
+          background-color: #393939;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+.danhmuc-sanpham{
+  padding: 50px 0;
+  &-list{}
+  &-item{
+    @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
+      $align-items: center, $gutter: null);
+    min-height: 335px;
+    position: relative;
+    &__image{
+      width: percentage(604/$max-width);
+    }
+    &__figure{
+      position: relative;
+      padding-top: percentage(335/605);
+      background-size: cover;
+    }
+    &__info{
+      @include absolute($right: 0px);
+      width: percentage(622/$max-width);
+      background-color: #fff;
+      padding: 50px 25px;
+    }
+    &__info--inner{}
+    &__name{
+      @include setFont(20px, #393939, 700, $font-text);
+      text-transform: capitalize;
+      &-url{
+        color: #393939;
+      }
+    }
+    &__desc{
+      @include setFont(15px, #393939, 400, $font-text);
+      @include line-clamp($font-size: 15px, $line-height: 1.5, $lines-to-show: 3, $max-height: false);
+      margin-bottom: 0;
+    }
+  }
+  &-item{
+    $this: &;
+    &--even{
+      @include justify-content(flex-end);
+      #{$this}__image{}
+      #{$this}__info{
+        right: unset;
+        left: 0;
+      }
+
+    }
+  }
+}
+.readmore-btn{
+  @include setFont(16px, #fff, 400, $font-text);
+  @include transition(all 0.2s ease);
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 15px;
+  border-radius: 5px;
+  border: 1px solid $theme-color;
+  background-color: $theme-color;
+  cursor: pointer;
+  i{
+    margin-left: 3px;
+  }
+  &:hover{
+    border-color: $theme2-color;
+    background-color: $theme2-color;
+    color: #333;
+  }
+  &--yellow{
+    border-color: $theme2-color;
+    background-color: $theme2-color;
+    color: #fff;
+  }
+  &--white{
+    border-color: #f8f8f8;
+    background-color: #f8f8f8;
+    color: #0078d4;
+  }
+}
+.ytuong{
+  $ytuong-gut: percentage(7/899);
+  padding: 50px 0;
+  .d-flex{
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+  }
+  &-head{
+    width: percentage(295/$max-width);
+    &__box{
+      @extend %bg-full;
+      position: relative;
+      padding-top: percentage(530/295);
+    }
+    &--inner{
+      @include absolute(15px, 15px, 15px, 15px);
+      @include background-opacity(#000,0.5);
+      @include grid(flex, $flex-wrap: wrap, $justify-content: center, 
+        $align-items: center, $flex-direction: column);
+      text-align: center;
+
+    }
+    &__name{
+
+      @include setFont(40px, #fff, 700, $font-text);
+      padding: 0 7px;
+    }
+    &__readmore{
+      @include setFont(15px, #fff, 400, $font-text);
+      display: inline-block;
+      margin-top: 10px;
+      border-bottom: 1px solid #fff;
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+  &-list{
+    @include grid($display: flex, $flex-wrap:wrap, $gutter: $ytuong-gut);
+    @include flex(1);
+    margin-left: 3.5px;
+  }
+  &-item{
+    @include grid-col($col: 4, $grid-columns:12, $gutter: $ytuong-gut);
+    margin-bottom: 7px;
+    &__url{
+      display: block;
+      position: relative;
+    }
+    &__figure{
+      position: relative;
+      z-index: 1;
+      padding-top: percentage(261/295);
+      margin-bottom: 0;
+    }
+    &__info{
+      @include absolute(0px, 0px, 0px, 0px);
+      @include bg("bong.png",$background-repeat: repeat-x,$background-size: null,$background-position: 0 bottom);
+      z-index: 2;
+    }
+    &__name{
+      @include setFont(16px, #fff, 400, $font-text);
+      @include absolute($left: 0px, $bottom: 10px);
+      text-transform: uppercase;
+      margin-bottom: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+.truyenthong{
+  padding: 35px 0;
+  background-size: cover;
+  .container{
+    @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
+      $align-items: null, $gutter: null);
+  }
+  .first-news{
+    &__name{
+      @include setFont(20px, #fff, 700, $font-text);
+    }
+    &__desc{
+      @include setFont(15px, #fff, 400, $font-text);
+      @include line-clamp($font-size: 15px, $line-height: 1.5, $lines-to-show: 2, $max-height: false);
+      margin-bottom: 7px;
+    }
+    &__figure{
+
+      @extend %bg-full;
+      padding-top: percentage(250/600);
+      position: relative;
+    }
+  }
+  &-left{
+    width: percentage(600/$max-width);
+  }  
+  &-right{
+    width: percentage(550/$max-width);
+    &-item{
+      
+      &__name{
+       @include setFont(20px, #fff, 700, $font-text);
+     }
+     &__desc{
+       @include setFont(15px, #fff, 400, $font-text);
+       @include line-clamp($font-size: 15px, $line-height: 1.5, $lines-to-show: 2, $max-height: false);
+       margin-bottom: 0;
+     }
+    }
+  }  
+}
+.tinmoi-container{
+  max-height: 475px;
+  overflow:hidden;
+  position:relative;
+  >ul{
+    @extend %reset-list;
+    @include relative($top: 0px);
+    box-sizing:border-box;
+    animation:slider 9s linear infinite;
+    li{
+      @include grid(flex, 
+        $align-items: center);
+      border-bottom: 1px solid rgba(255,255,255,0.29);
+      padding: 10px 0;
+      position: relative;
+      @include p-el(after, $el-width: null, $el-height: null){
+        @include setFont(15px, #fff, 700, $font-awesome);
+        @include absolute($right: 0px);
+        content: "\f35a";
+      }
+    }
+  }
+}
+.tinmoi-container >ul:hover{
+  animation-play-state:paused;
+}
+@include keyframes(slider) {
+  0%{top:0em}
+  100%{top:-10em}
+}
+.dongsonkhac{
+  padding: 50px 0;
+  &-main{
+
+    margin: 0 -10px;
+  }
+  &-item{
+    padding: 0 10px;
+    &__url{
+    background-color: #fff;
+      display: block;
+      padding: 10px 10px 30px;
+    }
+    &__figure{
+      @extend %bg-center;
+      position: relative;
+      padding-top: percentage(310/400);
+
+    }
+    &__name{
+      @include setFont(16px, #000, 400, $font-text);
+    }
+    &__desc{
+      @include setFont(15px, #333, 400, $font-text);
+      @include line-clamp($font-size: 15px, $line-height: 1.5, $lines-to-show: 3, $max-height: false);
+    }
+  }
+}
+.newsletter-chungnhan{
+  $padding-80: percentage(80/1366);
+  $padding-40: percentage(40/1366);
+  @include grid(flex, $flex-wrap: wrap, $justify-content: space-between, 
+    $align-items: null, $gutter: null);
+
+ .newsletter{
+  padding: 30px $padding-40 30px $padding-80;
+  background-size: cover;
+  width: 50%;
+  .form-control{}
+  .btn{}
+ } 
+ .chungnhan{
+  padding: 30px $padding-80 30px $padding-40;
+  width: 50%;
+  background-size: cover;
+
+ }
+ 
+ .quangcao2-main{
+  margin: 0 -15px;
+ } 
+ .quangcao2-item{
+  
+  padding: 0 15px;
+  &__url{
+    display: block;
+    border: 5px solid #cf9a3f;
+    background-color: #fff;
+  }
+  &__figure{
+    @extend %bg-full;
+    margin-bottom: 0;
+    position: relative;
+    padding-top: percentage(600/400);
+
+  }
+ } 
+}
+.inner-banner{
+  @extend %bg-full;
+  position: relative;
+  padding-top: percentage(260/1366);
+}
+.product-danhmuc-links{
+  @include grid(flex, $flex-wrap: wrap, $justify-content: center, 
+    $align-items: null, $gutter: null);
+  margin: 30px 0;
+}
+.product-danhmuc-link{
+  @include setFont(20px, #393939, 700, $font-text);
+  @include transition(all 0.2s ease);
+  border-bottom: 1px solid #393939;
+  display: inline-block;
+  padding: 2px 0.5em;
+  margin-bottom: 10px;
+
+  &.active{
+    border: 1px solid $theme-color;
+    color: #fff;
+    background-color: $theme-color;
+    border-radius: 5px;
+  }
+  @include doubly(){
+    margin-left: percentage(100/$max-width);
+  }
+}

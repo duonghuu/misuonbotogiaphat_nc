@@ -1,0 +1,379 @@
+:root {
+    --placeholder1: #f5f1ec;
+    --placeholder2: #919191;
+    --tieude: #000000;
+}
+
+::-webkit-scrollbar {
+    background: #fff;
+    width: 10px;
+    height: 11px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+}
+
+.scrollstyle-4::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.scrollstyle-4::-webkit-scrollbar {
+    width: 4px;
+    background-color: #F5F5F5;
+}
+
+.scrollstyle-4::-webkit-scrollbar-thumb {
+    background-color: #9b9b9b;
+    border: 1px solid #9b9b9b;
+}
+
+.placeholder-1::-webkit-input-placeholder {
+    color: var(--placeholder1);
+}
+
+.placeholder-1::-moz-placeholder {
+    color: var(--placeholder1);
+}
+
+.placeholder-1:-ms-input-placeholder {
+    color: var(--placeholder1);
+}
+
+.placeholder-1:-moz-placeholder {
+    color: var(--placeholder1);
+}
+
+.placeholder-2::-webkit-input-placeholder {
+    color: var(--placeholder2);
+}
+
+.placeholder-2::-moz-placeholder {
+    color: var(--placeholder2);
+}
+
+.placeholder-2:-ms-input-placeholder {
+    color: var(--placeholder2);
+}
+
+.placeholder-2:-moz-placeholder {
+    color: var(--placeholder2);
+}
+
+* {
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget span iframe[style] {
+    min-width: 100% !important;
+}
+
+.fb-comments,
+.fb-comments iframe[style],
+.fb-like-box,
+.fb-like-box iframe[style] {
+    width: 100% !important;
+}
+
+.fb-comments span,
+.fb-comments iframe span[style],
+.fb-like-box span,
+.fb-like-box iframe span[style] {
+    width: 100% !important;
+}
+
+.video_popup {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video_popup iframe,
+.video_popup object,
+.video_popup embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#clickvideo {
+    width: 100%;
+    padding: 4px 0;
+    margin: 3px 0%;
+    border: 1px solid #DDD;
+    box-sizing: border-box;
+}
+
+.addthis_native_toolbox {
+    margin: 10px 0px;
+    width: 100%;
+    clear: both;
+    border: 1px solid #ededed;
+    padding: 10px;
+    background: #f7f6f6;
+    box-sizing: border-box;
+    b{
+        float: left;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-right: 10px;
+    }
+}
+
+#toptop {
+    @include box(49px, 50px, 50%);
+    @include fixed($bottom: 50px, $right: 10px);
+    @include grid($display: flex, $align-items: center, $justify-content: center);
+    @include transition(all 0.5s ease);
+    @include setFont(47px, #f55556);
+    cursor: pointer;
+    background: #fff;
+    z-index: 20000000;
+    transform: rotate(-90deg);
+    i {
+        margin-left: 0px;
+        margin-top: 1px;
+    }
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.content{
+  img {
+    max-width: 100% !important;
+    height: auto;
+    }  
+}
+div.bando img {
+    max-width: none !important;
+}
+
+div.map iframe {
+    max-width: 100% !important;
+}
+
+.hidden_mobi {
+    display: block;
+}
+
+.hidden_destop {
+    display: none;
+}
+
+body {
+    @include font-size(16, 16);
+    font-family: $font-text;
+    &.clsindex{
+    }
+    
+}
+
+div#wapper {
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    @include when-inside(".clsindex"){
+    background-color: #f8f8f8;
+
+    }
+}
+
+div#lang {
+    display: flex;
+    a {
+        display: inline-flex;
+        img {
+            height: 15px;
+            object-fit: cover;
+        }
+        @include doubly(){
+            margin-left: 3px;
+        }
+    }
+}
+
+.widget{
+    margin-bottom: 24px;
+    &__title{
+        @include setFont(15px, #fff, 900, $font-text);
+        line-height: 46px;
+        background-color: $theme-color;
+        text-transform: uppercase;
+        padding: 0 20px;
+        i{
+            margin: 0 10px;
+        }
+    }
+    &__box{
+        border: 1px solid #f1f1f1;
+        background-color: #fff;
+    }
+    &__links{
+        padding: 5px 16px;
+    }
+    &__link{
+        margin-bottom: 0;
+        &-url{
+            @include grid(flex, 
+              $align-items: center, $gutter: null);
+            @include setFont(15px, #333, 700, $font-text);
+            position: relative;
+            padding: 15px 0 15px 16px;
+            line-height: 1;
+            @include p-el(before, $el-width: 5px, $el-height: 5px){
+              background-color: $theme-color;
+              border-radius: 50%;
+              left: 0;
+            }
+        }
+        @include doubly(){
+            border-top: 1px dashed #c1c1c1;
+        }
+    }
+    .quangcao{
+        &-item{
+            margin-bottom: 18px;
+            &__url{
+                display: block;
+            }
+            &__img{}
+        }
+    }
+    .hotro{
+        @include bg("hotro.jpg",$background-repeat: no-repeat,$background-size: null,$background-position: center 0);
+        padding-top: 117px;
+        &__hotline{
+            @include grid(flex, $flex-wrap: null, $justify-content: null, 
+              $align-items: flex-start, $gutter: null);
+            padding-left: 6px;
+            &-img{
+                margin-right: 8px;
+            }
+            &-info{}
+            &-text{
+                @include setFont(14px, #fff, 400, 'Arial');
+                margin-bottom: 0;
+                line-height: 1;
+            }
+            &-dienthoai{
+                @include setFont(26px, #ff0300, 400, $font-UTMHelvetIns);
+                @include text-shadow(2px,2px,0px,#fff, 5px 5px 5px rgba(0,0,0,.48));
+                margin-bottom: 0;
+                line-height: 1;
+            }
+        }
+        
+        &-list{
+            padding: 5px 16px;
+        }
+        &-item{
+            padding: 10px 0;
+            &__line{
+                @include grid(flex, $flex-wrap: nowrap, $justify-content: null, 
+                  $align-items: center, $gutter: null);
+            }
+            &__email{
+                @include setFont(14px, #000, 700, $font-text);
+                margin-bottom: 5px;
+
+            }
+            &__zalo{
+                @include box(34px,32px);
+                @include bg("zalo.png",$background-repeat: no-repeat,$background-size: null,$background-position: 0 0);
+            }
+            &__ten{
+                @include setFont(em(13), #333, 400, $font-text);
+            }
+            &__dienthoai{
+                @include flex(1);
+                @include setFont(em(16), $theme-color, 900, $font-text);
+                margin: 0 7px;
+            }
+            @include doubly(){
+                border-top: 1px dotted #ccc;
+            }
+        }
+    }
+}
+
+div.main_content {
+    position: relative;
+    z-index: 5;
+    margin: em(30) auto;
+    overflow: hidden;
+    @at-root .clstrangchu #{&},.clsindex #{&} {
+        margin: 0 auto;
+    }
+
+    div.left {
+        // width: percentage(240/$max-width);
+        // z-index: 50;
+        // float: left;
+
+    }
+}
+.container {
+    max-width: $max-width * 1px;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+}
+.media-list{
+    @include grid($display: flex, $flex-wrap:wrap, $gutter:2%);
+    .media-item{
+        @include grid-col($col: 3, $grid-columns:12, $gutter:2%);
+        @include setFont(15px, #000, 400, $font-text);
+        display: block;
+        text-align: center;
+        &__figure{
+            padding-top: 75%;
+            position: relative;
+            img{
+                @extend %img-fill;
+            }
+        }
+        &__name{
+            font-size: 15px;
+        }
+
+        @include media("<=500px"){
+            @include grid-col($col: 6, $grid-columns:12, $gutter:1%);
+        }
+    }
+}
+.page-maintitle{
+    @include setFont(em(22), $theme-color, 700, $font-text);
+    text-align: center;
+    text-transform: uppercase;
+
+}
