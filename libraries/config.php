@@ -19,7 +19,7 @@
 
 	date_default_timezone_set('Asia/Ho_Chi_Minh');
 
-	$config_url=$_SERVER["SERVER_NAME"].'';
+	$config_url=$_SERVER["SERVER_NAME"].'/misuonbotogiaphat_nc';
 	$config['debug']=1;    #Bật chế độ debug dành cho developer
 	$config['lang']="vi";
 	$config['salt1']='@nina';
@@ -40,9 +40,9 @@
 	
 
 	$config['database']['servername'] = 'localhost';
-	$config['database']['username'] = 'misuonboto_db';
-	$config['database']['password'] = 'SXLdDPcd';
-	$config['database']['database'] = 'misuonboto_db';
+	$config['database']['username'] = 'root';
+	$config['database']['password'] = '';
+	$config['database']['database'] = 'nc_misuonbotogiaphat';
 	$config['database']['refix'] = 'table_';
 
 

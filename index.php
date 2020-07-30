@@ -50,7 +50,10 @@
 	} else {
 		$_SESSION['links']=getCurrentPageURL();
 	}
-
+    if($lang == "")
+    {
+        $lang='vi';
+    }
 	
 ?>
 <!DOCTYPE html PUBLIC>
@@ -136,7 +139,9 @@ $(document).ready(function(e) {
 </script>      
 <?php } ?>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBNR4Gq8gmJYx2Zx_5UU3-yKTV0E7WpixQ&sensor=true"></script>
-<?=$row_setting['scriptcodeheader']?>
+<?php /* 
+<?=$row_setting['scriptcodeheader']?> 
+*/?>
 </head>
 <body itemscope itemtype="http://schema.org/WebPage">
 <?php if(!isset($_GET['id'])) { ?> <h1 style="display:none" class="vcard fn"><?=$row_setting['title']?></h1> <?php } ?> 

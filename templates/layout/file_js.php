@@ -232,4 +232,86 @@ $('.slickykien').slick({
         }
       }); 
     });
+    function add_popup(str){
+      $('body').append('<div class="login-popup" style="width:300px;"><div class="close-popup">x</div><div class="popup_thongbao"><p class="tieude_tb">Thông báo</p><p class="popup_kq">'+str+'</p></div></div>');
+      $('.thongbao').html('');
+      $('.login-popup').fadeIn(300);
+      $('body').append('<div id="baophu"></div>');
+      $('#baophu').fadeIn(300);
+      return false;
+    }
+      $(document).ready(function() {
+        $('.cus-radio-items .cus-radio').click(function(){
+          $('.cus-radio-items .cus-radio').removeClass('active');
+          $(this).addClass('active');
+        });
+        $(document).on('click','#baophu, .close-popup,.ttmh',function(){
+              $('#baophu,.popup_donhang,.login-popup').animate({left:'-100%'},500);
+              setTimeout(function(){
+                  $('#baophu,.wap_giohang,.login-popup').remove()
+              }, 700);
+          });
+        $('.dathang').click(function(){
+          if($('.size').length && $('.active_size').length==false)
+          {
+            alert('<?=_chonsize?>');
+            return false;
+          }
+          if($('.active_size').length)
+          {
+            var size = $('.active_size').html();
+          }
+          else
+          {
+            var size = '';
+          }
+
+          if($('.mausac').length && $('.active_mausac').length==false)
+          {
+            alert('<?=_chonmau?>');
+            return false;
+          }
+          if($('.active_mausac').length)
+          {
+            var mausac = $('.active_mausac').html();
+          }
+          else
+          {
+            var mausac = '';
+          }
+          var act = "dathang";
+          var id = $(this).data('id');
+          
+          var soluong = $('.soluong').val();
+          if(soluong==undefined){
+            soluong = 1;
+          }
+          if(soluong>0)
+          {
+            $.ajax({
+              type:'post',
+              url:'ajax/cart.php',
+              dataType:'json',
+              data:{id:id,size:size,mausac:mausac,soluong:soluong,act:act},
+              beforeSend: function() {
+                $('.thongbao').html('<p><img src="images/loader_p.gif"></p>');
+              },
+              error: function(){
+                add_popup('<?=_hethongloi?>');
+              },
+              success:function(kq){
+                add_popup(kq.thongbao);
+                $('.giohang_fix span').html(kq.sl);
+                console.log(kq);
+              }
+            });
+          }
+          else
+          {
+            alert('<?=_nhapsoluong?>');
+          }
+          return false;
+        });
+      });
+
   </script> 

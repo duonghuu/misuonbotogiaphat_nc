@@ -55,8 +55,7 @@ if(!empty($_POST)){
 			$d->query($sql);
 			if($d->num_rows() == 1){
 				$row = $d->fetch_array();
-			  //encrypt_password($password,$config['salt1'],$config['salt2']);
-
+			  // encrypt_password($password,$config['salt1'],$config['salt2']);
 				if($row['password'] == encrypt_password($password,$config['salt1'],$config['salt2'])){ 
 					//dang nhap thanh cong
 					//*****************

@@ -26,6 +26,13 @@
         </div> 
         <div class="chitietsanpham"><?=_luotxem?>: <span><?php echo $row_detail['luotxem']; ?></span></div>      
         <div class="chitietsanpham"><div class="addthis_native_toolbox" ></div></div>
+        <div class="item_des_detail chitietsanpham">
+          <span><?=_soluong?>: <input type="number" value="1" min="0" class="soluong" /></span>                       
+        </div>
+
+        <div class="item_des_detail chitietsanpham">
+          <a class="add_to_cart dathang" data-id="<?=$row_detail['id']?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Mua ngay</a>                       
+        </div>
     </div>
     <div class="clear10"></div>
     <h3><?=_thongtinchitiet?></h3>  

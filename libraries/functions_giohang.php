@@ -1,10 +1,38 @@
-<?
+<?php
+function get_code($pid){
+	global $d, $row;
+	$sql = "select masp from table_product where id='".$pid."'";
+	$d->query($sql);
+	$row = $d->fetch_array();
+	return $row['masp'];
+}
 	function get_product_name($pid){
 		global $d, $row,$lang;
-		$sql = "select ten_$lang from #_product where id='".$pid."'";
+		$sql = "select ten_$lang as ten from #_product where id='".$pid."'";
 		$d->query($sql);
 		$row = $d->fetch_array();
-		return $row['ten_'.$lang];
+		return $row['ten'];
+	}
+	function get_tong_tien($id=0){
+		global $d;
+		if($id>0){
+			$d->reset();
+			$sql="select gia,soluong from #_chitietdonhang where madonhang='".$id."'";
+			$d->query($sql);
+			$result=$d->result_array();
+			$tongtien=0;
+			for($i=0,$count=count($result);$i<$count;$i++) {
+				$tongtien+=	$result[$i]['gia']*$result[$i]['soluong'];
+			}
+			return $tongtien;
+		}else return 0;
+	}
+	function get_product_photo($pid){
+		global $d, $row;
+		$sql = "select thumb from #_product where id=$pid";
+		$d->query($sql);
+		$row = $d->fetch_array();
+		return $row['thumb'];
 	}
 	function get_hinh($pid){
 		global $d, $row;

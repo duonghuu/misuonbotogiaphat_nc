@@ -248,4 +248,58 @@ Mail: info@liontourist.com   -   Website: www.liontourist.com<br/></b>
 
 @define ('_xacnhan','Xác Nhận');
 @define ('_xoa','Xóa');
+//---------------- Gio hàng + Thanh toán ----------------
+@define ('_thongtingiohang','Thông tin giỏ hàng');
+@define ('_dongia','Đơn giá');
+@define ('_soluong','Số lượng');
+@define ('_thanhtien','Thành tiền');
+@define ('_tieptucmuahang','Tiếp tục mua hàng');
+@define ('_tongtien','Tổng tiền');
+@define ('_tongsotienthanhtoan','Tổng số tiền thanh toán');
+
+@define ('_giohang','Giỏ hàng');
+@define ('_ten','Tên');
+@define ('_hinhanh','Hình ảnh ');
+@define ('_soluong','Số lượng ');
+@define ('_mausac','Màu sắc');
+@define ('_mau','Màu');
+@define ('_size','Size');
+@define ('_tonggia','Tổng giá');
+@define ('_xoa','Xóa');
+@define ('_muatiep','Mua tiếp');
+@define ('_xoatatca','Xóa tất cả');
+@define ('_capnhat','Cập nhật');
+@define ('_thanhtoan','Thanh toán');
+@define ('_thongtinkhachhang','Thông tin khách hàng');
+
+@define ('_nhapsoluong','Nhập số lượng');
+@define ('_chonsize','Chọn size');
+@define ('_chonmau','Chọn màu');
+@define ('_dathang','Đặt hàng');
+@define ('_themvaogio','Thêm vào giỏ');
+@define ('_sanphamthemvaogiohang','Sản phẩm được thêm vào giỏ hàng của bạn');
+@define ('_datmuasanpham','Đặt mua sản phẩm');
+@define ('_chonhinhthucthanhtoan','Chọn hình thức thanh toán');
+@define ('_tinhthanhpho','Tỉnh/thành phố');
+@define ('_quanhuyen','Quận/huyện');
+@define ('_ghichu2','Ghi chú');
+@define ('_xemgiohang','Xem giỏ hàng');
+@define ('_chontinhthanhpho','Chọn tỉnh/thành phố');
+@define ('_chonquanhuyen','Chọn quận/huyện');
+@define ('_khongcosanphamtronggiohang','Không có sản phẩm trong giỏ hàng');
+
+
+@define ('_thongtinkhachhang','Thông tin khách hàng');
+@define ('_hinhthucthanhtoan','HT thanh toán');
+@define ('_nhanhanggiaotien','Nhận hàng giao tiền');
+@define ('_quathenganhang','Qua thẻ ngân hàng');
+@define ('_tinh','Tỉnh');
+@define ('_chontinh','Chọn tỉnh');
+@define ('_quan','Quận');
+@define ('_chonquan','Chọn quận');
+@define ('_hoantatdathang','Hoàn tất đặt hàng');
+@define ('_khongcosanphamtronggiohang','Không có sản phẩm nào trong giỏ hàng');
+
+@define ('_bandanhgia','Bạn đánh giá là');
+@define ('_danhgiaroi','Bạn đã đánh giá rồi.Vui lòng đánh giá lại sau 24h.Cảm ơn');
 ?>

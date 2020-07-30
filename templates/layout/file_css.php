@@ -1,5 +1,6 @@
 <link rel="stylesheet" type="text/css" href="css/map.css"/>
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/giohang.css"/>
 <link rel="stylesheet" type="text/css" href="nivo-slider/nivo-slider.css"/>
 <link rel="stylesheet" type="text/css" href="nivo-slider/themes/default/default.css"/>
 

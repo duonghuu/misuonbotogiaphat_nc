@@ -251,22 +251,22 @@ function fns_Rand_digit($min,$max,$num)
 	}
 	return $result;	
 }
-function get_tong_tien($id=0){
-		global $d;
-		if($id>0){
-			$d->reset();
-			$sql="select gia,soluong from #_order_detail where id_order='".$id."'";
-			$d->query($sql);
-			$result=$d->result_array();
-			$tongtien=0;
-			for($i=0,$count=count($result);$i<$count;$i++) { 
+// function get_tong_tien($id=0){
+// 		global $d;
+// 		if($id>0){
+// 			$d->reset();
+// 			$sql="select gia,soluong from #_order_detail where id_order='".$id."'";
+// 			$d->query($sql);
+// 			$result=$d->result_array();
+// 			$tongtien=0;
+// 			for($i=0,$count=count($result);$i<$count;$i++) { 
 			
-			$tongtien+=	$result[$i]['gia']*$result[$i]['soluong'];	
+// 			$tongtien+=	$result[$i]['gia']*$result[$i]['soluong'];	
 			
-			}
-			return $tongtien;
-		}else return 0;
-	}
+// 			}
+// 			return $tongtien;
+// 		}else return 0;
+// 	}
 function daxem($pid){
 		if($pid<1) return;
 		

@@ -181,7 +181,8 @@ function edit(){
 	global $d, $item, $login_name,$config;
 	
 	if(!empty($_POST)){
-		$sql = "select * from #_user where username!='".$_SESSION['login']['username']."' and username='".$_POST['username']."' and role=3";
+		$sql = "select * from #_user where username!='".$_SESSION['login']['username']."' 
+		and username='".$_POST['username']."' and role=3";
 		$d->query($sql);
 		if($d->num_rows() > 0) transfer("Tên đăng nhập này đã có","index.php?com=user&act=edit");
 		
